@@ -1,0 +1,251 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* Skip to main content link for keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0066cc;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Main container - journalism standard width */
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px 20px;
+}
+
+/* Header styling - clean journalism aesthetic */
+header {
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+/* Byline styling - industry standard with color accent */
+.meta-info {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.875em;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.author-name {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+/* Main content area */
+main {
+    margin-bottom: 48px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+/* Story map section styling */
+.story-map {
+    margin: 48px 0;
+    padding: 24px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.story-map h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5em;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.story-map iframe {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Journalism-standard paragraph styling */
+p {
+    font-size: 1.125em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: #1a1a1a;
+}
+
+/* Iframe styling for embedded content */
+iframe {
+    display: block;
+    margin: 2em 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+/* First paragraph emphasis with drop cap */
+article p:first-of-type {
+    font-size: 1.25em;
+    line-height: 1.7;
+}
+
+article p:first-of-type::first-letter {
+    float: left;
+    font-size: 4.5em;
+    line-height: 0.85;
+    margin: 0.05em 0.1em 0 0;
+    color: #0066cc;
+    font-weight: 700;
+}
+
+/* Accessible focus states */
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #004999;
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* Footer - minimal journalism style with color accent */
+footer {
+    border-top: 3px solid #0066cc;
+    padding-top: 24px;
+    margin-top: 48px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 0.8em;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    padding-bottom: 24px;
+}
+
+/* Mobile-responsive typography */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 1.25;
+    }
+
+    p {
+        font-size: 1.0625em;
+    }
+
+    article p:first-of-type {
+        font-size: 1.1875em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+    article p:first-of-type {
+        font-size: 1.125em;
+    }
+}
+
+/* Print styles - journalism optimized */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    header {
+        border-bottom: 2px solid black;
+    }
+
+    p {
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    footer {
+        border-top: 1px solid black;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+
+    header {
+        border-bottom: 3px solid #000;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
